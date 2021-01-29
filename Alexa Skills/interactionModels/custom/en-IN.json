@@ -1,0 +1,89 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my application",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "TextFileIntent",
+          "slots": [],
+          "samples": [
+            "text file information",
+            "Read text file",
+            "Open text file"
+          ]
+        },
+        {
+          "name": "MaskIntent",
+          "slots": [],
+          "samples": [
+            "is he wearing a mask",
+            "mask",
+            "is mask on",
+            "Do I have a mask on"
+          ]
+        },
+        {
+          "name": "SDistancingIntent",
+          "slots": [],
+          "samples": [
+            "distance status outside",
+            "is distance being maintained",
+            "social distancing report"
+          ]
+        },
+        {
+          "name": "DoctorAvailabilityIntent",
+          "slots": [],
+          "samples": [
+            "doctor available",
+            "doctor",
+            "i would like to book an appointment with my doctor",
+            "i would like to see my doctor",
+            "is my doctor available"
+          ]
+        },
+        {
+          "name": "PatientIDIntent",
+          "slots": [],
+          "samples": [
+            "my number is",
+            "my patient number is",
+            "my ID number is",
+            "My patient ID is"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "10"
+}
