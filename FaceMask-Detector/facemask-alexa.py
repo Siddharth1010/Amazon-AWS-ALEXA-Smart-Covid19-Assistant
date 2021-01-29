@@ -9,10 +9,12 @@ import cv2
 import os
 import boto3
 from boto.s3.key import Key
+
+# Function to upload results to Amazon S3 bucket
 def upload_to_s3(i,labfinal):
 
 	from botocore.client import Config
-
+	# Enter your Access Key, Secret Access Key and Bucket Name configured in AWS
 	ACCESS_KEY_ID = """ Enter AWS Access Key ID"""
 	ACCESS_SECRET_KEY = """ Enter AWS Secret Access Key"""
 	BUCKET_NAME = """ Enter AWS Access S3 Bucket Name"""
@@ -34,6 +36,7 @@ def upload_to_s3(i,labfinal):
 	s3.Bucket(BUCKET_NAME1).put_object(Key='status.txt', Body=f.read())
 	print ("Done")
 
+# Function to detect and predict mask through trained weights
 def detect_and_predict_mask(frame, faceNet, maskNet):
 	(h, w) = frame.shape[:2]
 	blob = cv2.dnn.blobFromImage(frame, 1.0, (224, 224),
@@ -80,6 +83,7 @@ print("[INFO] starting video stream...")
 vs = VideoStream(src=0).start()
 p=0
 labfinal=''
+# Drawing Boxes, Assigning labels and capturing each frame
 while True:
 	frame = vs.read()
 	frame = imutils.resize(frame, width=400)

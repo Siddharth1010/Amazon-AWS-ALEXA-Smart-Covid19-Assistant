@@ -6,11 +6,12 @@ import os
 import boto3
 from boto.s3.key import Key
 
+# Function to upload results to Amazon S3 bucket
 def upload_to_s3(i,text):
 
 	from botocore.client import Config
 
-
+    # Enter your Access Key, Secret Access Key and Bucket Name configured in AWS
     ACCESS_KEY_ID = """ Enter AWS Access Key ID"""
 	ACCESS_SECRET_KEY = """ Enter AWS Secret Access Key"""
 	BUCKET_NAME = """ Enter AWS Access S3 Bucket Name"""
@@ -48,6 +49,7 @@ net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
 cap = cv2.VideoCapture(0)
 
+# Draw boxes, Calculate distances, Change colour and Capture each frame
 while(cap.isOpened()):
     
     ret,image=cap.read()
